@@ -1,0 +1,65 @@
+# sample user data file.  version: 2025-09-09
+# CSE416, Software Engineering, Scott D. Stoller.
+
+registrars:
+- SBU_ID: 100765432
+  first_name: Rob
+  last_name: Rogers
+  email: rob.rogers@stonybrook.edu
+- SBU_ID: 100654321
+  first_name: Ralph
+  last_name: Randall
+  email: ralph.randall@stonybrook.edu
+
+academic_advisors:
+- SBU_ID: 100765432
+  first_name: Alan
+  last_name: Alda
+  email: alan.alda@stonybrook.edu
+  level: university # valid values: university, college, department
+  academic_unit: SBU # acronym of a college or school (e.g., CAS, SoCJ) or department (e.g., CSE), or SBU for university-level advisors
+- SBU_ID: 100765432
+  first_name: Kevin
+  last_name: Kamper
+  email: kevin.kamper@stonybrook.edu
+  level: department
+  academic_unit: CSE
+
+instructors:
+- SBU_ID: 100987654
+  first_name: Scott
+  last_name: Stoller
+  email: scott.stoller@stonybrook.edu
+- SBU_ID: 100876543
+  role: instructor
+  first_name: Alan
+  last_name: Turing
+  email: alan.turing@stonybrook.edu
+
+students:
+- SBU_ID: 100123456
+  first_name: Charles
+  last_name: brown
+  email: charlie.brown@stonybrook.edu
+  university_entry: [Fall, 2020] # semester  in which the student entered the university.  valid values for semester: Fall, Spring, SummerI, SummerII
+  direct_admit: null # major to which the student was directly admitted when accepted to the university, if any, otherwise null
+  AOI: CSE # major for which the student is AOI if any, otherwise null
+  college: # college or school that the student is in, identified by acronym, e.g., CEAS
+  majors: [CSE,AMS] # list of majors, identified by 3-letter codes, e.g., CSE
+  major_requirement_versions: [{semester: Fall, year: 2020}, {semester: Fall, year: 2021}] # the degree requirements version the student is following for each major.
+  minors: [] # list of minors, identified by 3-letter codes
+  minor_requirement_versions: []
+  graduation: {semester: Fall, year: 2020} # term in which the student graduated (if they did), otherwise null
+  transfer_courses: # list of transfer courses and transfer credits.
+    # 'class' and 'university' identify the original class.  department and course_num identify the equivalent SBU course, if any, otherwise they are null.
+    - {class: CSE101, university: SCCC, credits: 3, department: CSE, course_num: 101, grade: A}
+    - {class: CSE999, university: SCCC, credits: 3, department: null, course_num: null, grade: null}
+  classes:  # list of classes the student took, is taking, or is registered for in a future semester.  sorted by semester.
+    - {class_id: 12345, department: CSE, course_num: 101, section: 2, semester: Fall, year: 2020, credits: 3, grade: A}
+    - {class_id: 23456, department: AMS, course_num: 151, section: 1, semester: Spring, year: 2021, credits: 3, grade: A-}
+    - {class_id: 34567, department: CSE, course_num: 214, section: 2, semester: SummerI, year: 2020, credits: 3, grade: A-}
+    - {class_id: 45678, department: AMS, course_num: 261, section: 1, semester: Fall, year: 2025, credits: 3, grade: null}
+    - {class_id: 56789, department: CSE, course_num: 220, section: 1, semester: Spring, year: 2025, credits: 3, grade: null}
+  course_plan: # list of classes the student plans to take in future semesters, sorted by semester.  should be disjoint from 'classes'.
+    - {department: CSE, course_num: 216, semester: Fall, year: 2026, credits: 3}
+    - {department: CSE, course_num: 320, semester: Spring, year: 2027, credits: 3}
