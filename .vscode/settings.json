@@ -26,5 +26,9 @@
     "[markdown]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2
+    },
+    "material-icon-theme.files.associations": {
+        "*.service.ts": "typescript",
+        "*.router.ts": "routing"
     }
 }

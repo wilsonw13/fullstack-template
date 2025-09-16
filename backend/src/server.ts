@@ -1,8 +1,8 @@
 import cors from "cors";
 import express, { type Express } from "express";
 import helmet from "helmet";
-import { healthCheckRouter } from "@/api/healthCheck/healthCheckRouter";
-import { userRouter } from "@/api/user/userRouter";
+import { healthCheckRouter } from "@/router/healthCheck.router";
+import { userRouter } from "@/router/user.router";
 import errorHandler from "@/common/middleware/errorHandler";
 import { addRequestId, captureResponseBody, requestFileLogger, requestConsoleLogger } from "@/common/middleware/requestLogger";
 

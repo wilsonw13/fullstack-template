@@ -1,5 +1,5 @@
 import express, { type Request, type Response, type Router } from "express";
-import { ServiceResponse } from "@/common/models/serviceResponse";
+import { ServiceResponse } from "@/common/utils/serviceResponse";
 
 export const healthCheckRouter: Router = express.Router();
 
