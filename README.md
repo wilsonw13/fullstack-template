@@ -3,7 +3,7 @@
 
 2. Install pnpm
 ```bash
-npm install -g pnpm@10.15.1
+npm install -g pnpm
 ```
 
 3. Install packages
